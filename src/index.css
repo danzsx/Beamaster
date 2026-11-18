@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #f6f6f3;
+    color: #1e2430;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Textura sutil de pontinhos no canvas, inspirada na referência */
+.canvas-dots {
+  background-color: #f6f6f3;
+  background-image: radial-gradient(rgba(30, 36, 48, 0.085) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Scrollbar serena */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 36, 48, 0.12);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 36, 48, 0.22);
+}
+
+/* Prisma luminoso central */
+.luminous-prism {
+  background: conic-gradient(
+    from 140deg at 50% 50%,
+    rgba(147, 197, 253, 0.85),
+    rgba(196, 181, 253, 0.85),
+    rgba(253, 230, 138, 0.65),
+    rgba(134, 239, 172, 0.65),
+    rgba(43, 76, 126, 0.72),
+    rgba(147, 197, 253, 0.85)
+  );
+  filter: blur(0.4px);
+  box-shadow:
+    0 24px 70px -18px rgba(96, 165, 250, 0.35),
+    0 12px 36px -12px rgba(167, 139, 250, 0.32),
+    inset 0 2px 24px rgba(255, 255, 255, 0.78);
+}
+
+.card-depth {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.card-depth:hover {
+  transform: translateY(-6px) rotate(-0.6deg);
+  box-shadow: 0 24px 48px -18px rgba(30, 36, 48, 0.14);
+}
+
